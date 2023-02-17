@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RobotControl</class>
+ <widget class="QWidget" name="RobotControl">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>341</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GotTheBlues</string>
+  </property>
+  <layout class="QGridLayout" name="GotTheBlues">
+   <item row="0" column="2">
+    <widget class="QPushButton" name="pTerm">
+     <property name="text">
+      <string>Open Terminal</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="3">
+    <widget class="QPushButton" name="pStop">
+     <property name="text">
+      <string>STOP</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Left motor</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="3">
+    <widget class="QPushButton" name="pSend">
+     <property name="text">
+      <string>Send Data</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Right motor</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" colspan="2">
+    <widget class="QDoubleSpinBox" name="spRMot">
+     <property name="maximum">
+      <double>100.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="3">
+    <widget class="QPushButton" name="pAutoTest">
+     <property name="text">
+      <string>Motor auto-test</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" colspan="2">
+    <widget class="QDoubleSpinBox" name="spLMot">
+     <property name="maximum">
+      <double>100.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QPushButton" name="pConnect">
+     <property name="text">
+      <string>Connect to robot</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Error</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1" colspan="2">
+    <widget class="QDoubleSpinBox" name="spError">
+     <property name="maximum">
+      <double>100.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pConnect</sender>
+   <signal>clicked()</signal>
+   <receiver>RobotControl</receiver>
+   <slot>ConnectToRobot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>148</x>
+     <y>92</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>378</x>
+     <y>183</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pSend</sender>
+   <signal>clicked()</signal>
+   <receiver>RobotControl</receiver>
+   <slot>SendData()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>129</x>
+     <y>440</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>492</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pAutoTest</sender>
+   <signal>clicked()</signal>
+   <receiver>RobotControl</receiver>
+   <slot>LaunchMTest()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>121</x>
+     <y>352</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>76</x>
+     <y>312</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>ConnectToRobot()</slot>
+  <slot>SendData()</slot>
+  <slot>LaunchMTest()</slot>
+ </slots>
+</ui>
